@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "wx.mp.configs",
+      "type": "java.util.List",
+      "description": "微信小程序账号配置"
+    }
+  ]
+}
