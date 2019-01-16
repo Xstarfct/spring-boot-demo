@@ -2,25 +2,28 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.fct</groupId>
+    <artifactId>spring-boot-demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>${project.artifactId}</name>
+    <description>Demo project for Spring Boot</description>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.fct</groupId>
-    <artifactId>spring-boot-demo</artifactId>
-    <version>${demo.paren.version}</version>
-    <packaging>pom</packaging>
-    <name>${artifactId}</name>
-    <description>Demo project for Spring Boot</description>
 
     <modules>
         <module>demo-common</module>
         <module>demo-core</module>
-        <module>demo-api</module>
         <module>demo-client</module>
+        <module>demo-manager</module>
         <module>demo-service</module>
+        <module>demo-api</module>
     </modules>
 
     <properties>
@@ -31,6 +34,10 @@
         <demo.api.version>0.0.1-SNAPSHOT</demo.api.version>
         <demo.client.version>0.0.1-SNAPSHOT</demo.client.version>
         <demo.service.version>0.0.1-SNAPSHOT</demo.service.version>
+        <skipTests>true</skipTests>
+        <!-- maven方式跳过maven test, 等同$ mvn package -Dmaven.test.skip=true -->
+        <!-- <maven.test.skip>true</maven.test.skip> -->
+        <!-- surefire plugin方式跳过maven test， 等同$ mvn package -DskipTests -->
         <!---->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

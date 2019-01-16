@@ -8,15 +8,12 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>demo-common</artifactId>
-	<version>${demo.common.version}</version>
-	<name>${artifactId}</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
 	<description>springboot-demo-common</description>
+	<packaging>jar</packaging>
 
 	<dependencies>
 	</dependencies>
-
-	<build>
-		<finalName>${artifactId}</finalName>
-	</build>
 
 </project>

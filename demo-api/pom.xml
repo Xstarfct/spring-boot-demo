@@ -6,13 +6,11 @@
 		<groupId>com.fct</groupId>
 		<artifactId>spring-boot-demo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>
 	</parent>
 	<artifactId>demo-api</artifactId>
-	<version>${demo.api.version}</version>
-	<packaging>war</packaging>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>demo-api</name>
-	<description>DemoApi project for Spring Boot</description>
+	<description>${project.artifactId}</description>
 
 	<dependencies>
 		<!---->
@@ -40,7 +38,6 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -73,8 +70,11 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<!-- 如果没有该配置，devtools不会生效 -->
+					<fork>true</fork>
 					<!-- 指定该Main Class为全局的唯一入口 -->
 					<mainClass>com.fct.api.ApiApplication</mainClass>
+					<layout>ZIP</layout>
 				</configuration>
 				<executions>
 					<execution>
@@ -82,6 +82,10 @@
 						<goals>
 							<goal>repackage</goal>
 						</goals>
+						<!--可以生成不含依赖包的不可执行Jar包-->
+						<!--<configuration>-->
+							<!--<classifier>exec</classifier>-->
+						<!--</configuration>-->
 					</execution>
 				</executions>
 			</plugin>

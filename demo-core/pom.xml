@@ -8,8 +8,9 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>demo-core</artifactId>
-	<version>${demo.core.version}</version>
-	<name>demo-core</name>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<packaging>jar</packaging>
 	<description>Demo project for Spring Boot</description>
 
 	<dependencies>
@@ -47,12 +48,7 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
 		</dependency>
 	</dependencies>
-
-	<build>
-		<finalName>${artifactId}</finalName>
-	</build>
 
 </project>
