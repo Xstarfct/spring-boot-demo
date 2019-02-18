@@ -6,7 +6,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
 
 /**
  * 服务启动类
@@ -14,7 +13,6 @@ import com.alibaba.dubbo.config.spring.context.annotation.EnableDubbo;
  * @author xstarfct
  * @version 2019/1/15 11:10 AM
  */
-@EnableDubbo
 @SpringBootApplication
 @MapperScan({"com.fct.core.dao"})
 @EnableTransactionManagement
